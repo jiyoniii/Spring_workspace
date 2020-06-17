@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ex02/src/main/resources/org/zerock/mapper/BoardMapperTests.xml&apos; to &apos;BoardMapper.xml&apos;" description="Rename resource &apos;BoardMapperTests.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/org/zerock/mapper/BoardMapperTests.xml" name="BoardMapper.xml" stamp="1592372561006" updateReferences="true"/>
+</session>

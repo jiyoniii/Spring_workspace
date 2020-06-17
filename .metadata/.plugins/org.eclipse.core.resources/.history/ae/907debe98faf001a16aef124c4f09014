@@ -1,0 +1,6 @@
+package org.zerock.mapper;
+
+public interface TimeMapper {
+//	timemapper.xml에서도 getTime2() 와 메서드가 일치해야 함.
+	public String getTime2();
+}
