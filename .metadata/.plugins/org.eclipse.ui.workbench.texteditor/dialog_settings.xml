@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="log4j"/>
+		<item key="selection" value="panel-heading"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="panel-heading"/>
+			<item value="page-wrapper"/>
+			<item value="dashboard"/>
+			<item value="../"/>
 			<item value="log4j"/>
 			<item value="log4jdbc"/>
 			<item value="maven"/>
@@ -19,17 +23,14 @@
 			<item value="hikari"/>
 			<item value="spring"/>
 			<item value="spring-tx"/>
-			<item value="runtime"/>
-			<item value="compiler"/>
-			<item value="server"/>
-			<item value="unit"/>
 		</list>
 		<list key="replacehistory">
+			<item value="/resources/"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="3"/>
-		<item key="DIALOG_Y_ORIGIN" value="253"/>
+		<item key="DIALOG_X_ORIGIN" value="776"/>
+		<item key="DIALOG_Y_ORIGIN" value="283"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

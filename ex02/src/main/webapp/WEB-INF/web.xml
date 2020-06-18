@@ -29,5 +29,21 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+	
+	<!-- web.xml을 이용할 때의 UTF-8 필터. 이걸 사용해야 글 등록 시 한글이 깨지지 않고 등록됨 -->
+	<filter>
+		<filter-name>encoding</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>encoding</filter-name>
+		<servlet-name>appServlet</servlet-name>
+	</filter-mapping>
 
 </web-app>

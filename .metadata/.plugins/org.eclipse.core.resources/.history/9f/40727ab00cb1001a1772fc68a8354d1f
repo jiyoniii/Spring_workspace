@@ -1,0 +1,14 @@
+package org.zerock.mapper;
+
+import java.util.List;
+
+import org.zerock.domain.BoardVO;
+
+public interface BoardMapper {
+	//getList();는 BoardMapper.xml의 id와 똑같아야 함.
+	//getList()는 목록을 뜻함.
+	//본래대로면 겟리스트를 오버라이딩 해야하지만, BoardMapper.xml에서 id를 똑같이 getList로 맞추었기 때문에 따로 인터페이스를 상속하여 오버라이딩 할 필요가 없음.
+	public List<BoardVO> getList();
+	
+	public void insert (BoardVO board);
+}
