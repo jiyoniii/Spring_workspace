@@ -5,7 +5,41 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-06-17T15:00:00Z</updated>
+  <updated>2020-06-18T16:17:49Z</updated>
+  <entry>
+    <title>What's new in Spring Boot 2.3</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/06/18/what-s-new-in-spring-boot-2-3" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Phil Webb</name>
+    </author>
+    <id>tag:spring.io,2020-06-18:4110</id>
+    <updated>2020-06-18T16:17:49Z</updated>
+    <content type="html">&lt;p&gt;Speaker: &lt;a href="http://twitter.com/phillip_webb"&gt;Phil Webb (@phillip_webb)&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/WL7U-yGfUXA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;h2&gt;&lt;a href="#timecodes" class="anchor" name="timecodes"&gt;&lt;/a&gt;Timecodes&lt;/h2&gt;
+&lt;p&gt;Use the timecodes below if you want to jump to a specific part of the presentation:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://youtu.be/WL7U-yGfUXA?t=27"&gt;00:27&lt;/a&gt; - Intro&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://youtu.be/WL7U-yGfUXA?t=119"&gt;01:59&lt;/a&gt; - Creating the Demo&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://youtu.be/WL7U-yGfUXA?t=241"&gt;04:01&lt;/a&gt; - Building Docker Images with the Spring Boot Plugin&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://youtu.be/WL7U-yGfUXA?t=561"&gt;09:21&lt;/a&gt; - Building Docker Images with a Dockerfile&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://youtu.be/WL7U-yGfUXA?t=1000"&gt;16:40&lt;/a&gt; - Customizing Layers&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://youtu.be/WL7U-yGfUXA?t=1298"&gt;21:38&lt;/a&gt; - Graceful Shutdown&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://youtu.be/WL7U-yGfUXA?t=1519"&gt;25:19&lt;/a&gt; - Kubernetes Probes&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://youtu.be/WL7U-yGfUXA?t=1855"&gt;30:55&lt;/a&gt; - Configuration Properties End-to-End Traceability&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://youtu.be/WL7U-yGfUXA?t=1980"&gt;33:00&lt;/a&gt; - Wrap-up and Upgrade Gotchas&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#links" class="anchor" name="links"&gt;&lt;/a&gt;Links&lt;/h2&gt;
+&lt;p&gt;The following links are referenced in the presentation:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Building OCI Images [&lt;a href="https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/html/#build-image"&gt;Maven&lt;/a&gt;|&lt;a href="https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/#build-image"&gt;Gradle&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;Packaging Layered Jars [&lt;a href="https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/html/#repackage-layers"&gt;Maven&lt;/a&gt;|&lt;a href="https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/#packaging-layered-jars"&gt;Gradle&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;Customizing Layers [&lt;a href="https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/html/#repackage-layers-configuration"&gt;Maven&lt;/a&gt;|&lt;a href="https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/#packaging-layers-configuration"&gt;Gradle&lt;/a&gt;]&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#writing-the-dockerfile"&gt;Writing a Dockerfile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.3-Release-Notes"&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-boot/blob/master/CONTRIBUTING.adoc"&gt;Contributing Instructions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Getting Started With RSocket: Spring Security</title>
     <link rel="alternate" href="https://spring.io/blog/2020/06/17/getting-started-with-rsocket-spring-security" />
@@ -1246,34 +1280,6 @@ public class SampleConfiguration {
     <updated>2020-06-05T03:16:39Z</updated>
     <content type="html">&lt;p&gt;Hi, Spring fans! In this episode &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to &lt;a href="http://twitter.com/pithomit"&gt;Tim Pepper (@pythomit)&lt;/a&gt; from VMware&amp;rsquo;s Open Source Technology Center about Kubernetes and his role on the Kubernetes Release SIG. &lt;/p&gt;
 &lt;p&gt;&lt;iframe title="Kubernetes contributor and Kubernetes Release SIG Chair Tim Pepper" src="https://www.podbean.com/media/player/ihsc7-ded228?from=usersite&amp;vjs=1&amp;skin=1&amp;fonts=Helvetica&amp;auto=0&amp;download=1" height="315" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player"&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - June 2, 2020</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/06/03/this-week-in-spring-june-2-2020" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2020-06-03:4088</id>
-    <updated>2020-06-03T02:06:01Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans. We&amp;rsquo;ve got a ton of stuff to cover this week so let&amp;rsquo;s get to it.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/06/01/spring-cloud-greenwich-sr6-hoxton-sr5-and-2020-0-0-m2-aka-ilford-are-available"&gt;Spring Cloud Greenwich.SR6, Hoxton.SR5 and 2020.0.0-M2 (aka Ilford) are Available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/05/28/a-bootiful-podcast-dr-malini-bhandaru-on-edgex-and-the-opportunities-for-developers-in-the-iot-space"&gt;A Bootiful Podcast: Dr. Malini Bhandaru on EdgeX and the opportunities for developers in the IoT space&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/05/28/spring-security-oauth-2-5-0-released"&gt;Spring Security OAuth 2.5.0 Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/05/28/spring-fu-0-3-0-and-beyond"&gt;Spring Fu 0.3.0 and beyond&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/05/28/spring-tools-4-6-2-released"&gt;Spring Tools 4.6.2 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://docs.spring.io/spring-batch/docs/current/reference/html/spring-batch-integration.html#remote-partitioning"&gt;Spring Batch Integration&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/05/27/what-s-new-in-spring-data-elasticsearch-4-0"&gt;What&amp;rsquo;s new in Spring Data Elasticsearch 4.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.rabbitmq.com/blog/2020/06/01/this-month-in-rabbitmq-april-2020-recap/"&gt;This Month in RabbitMQ &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/juliendubois/status/1267599112893091841?s=12"&gt;A really nice thread about using Spring Boot, GraalVM native images, and Azure Functions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blog.codecentric.de/en/2020/06/spring-boot-graalvm-docker-heroku/"&gt;Running Spring Boot GraalVM Native Images with Docker &amp;amp; Heroku&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://cguntur.me/2020/05/20/understanding-apache-maven-the-series/"&gt;Understanding Apache Maven - a great series by Chandra Guntur&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;New blog post: Static Compilation of Java (and Spring Boot-based) Applications at Alibaba at Scale](&lt;a href="https://medium.com/graalvm/static-compilation-of-java-applications-at-alibaba-at-scale-2944163c92e"&gt;https://medium.com/graalvm/static-compilation-of-java-applications-at-alibaba-at-scale-2944163c92e&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;We are looking for maintainers for the Spring Cloud AWS project to join @maciejwalkowiak in taking the project forward. See this issue to volunteer or comment on the future of the project](&lt;a href="https://t.co/Hm1mXCBphr"&gt;https://t.co/Hm1mXCBphr&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Did you hear? Spring Cloud Data Flow 2.5 is now GA. Check out &lt;a href="https://t.co/gXV2bo3LZq"&gt;the enhancements here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

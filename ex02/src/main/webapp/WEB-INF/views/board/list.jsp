@@ -11,8 +11,10 @@
 		      
 		      checkModal(result);
 		      
+		      history.replaceState({},null,null); //history.state를 null로 변경
+		      
 		      function checkModal(result) {
-		         if(result===""){
+		         if(result==='' || history.state){ //history.state가 없으면(null)이면 띄우지 말라(return)는 뜻
 		            return;
 		         }
 		         if(parseInt(result)>0){
@@ -25,6 +27,25 @@
 		      $("#regBtn").on("click",function(){
 		         self.location="/board/register";
 		      });
+		      
+		      var actionForm=$("#actionForm");
+		      
+		      $(".paginate_button a").on("click", function(e){
+		    	  e.preventDefault();
+		    	  console.log("click");
+		    	  actionForm.find("input[name='pageNum']").val($(this).attr("href"));
+		      });
+		      
+		      $(".paginate_button a").on("click",function(e){
+		    	  e.preventDefault();
+		    	  
+		    	  console.log('click');
+		    	  
+		    	  actionForm.find("input[name='pageNum']").val($(this).attr("href"));
+		    	  actionForm.submit();
+		      });
+		      
+		      
 		      
 		   });
 	</script>
@@ -72,6 +93,40 @@
                                  
                             </table>
                             <!-- /.table-responsive -->
+							
+							
+							
+							<!-- paging ------------------------------------------------>
+							
+							<form id='actionForm' action ="/board/list" method='get'>
+								<input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum}'>
+								<input type='hidden' name='amount' value='${pageMaker.cri.amount }'>
+							</form>
+							
+							
+							<!-- pull-right는 오른쪽 정렬 -->
+							<div class='pull-right'> 
+								<ul class="pagination">
+								
+								<c:if test="${pageMaker.prev}">
+									<li class="paginate_button previous"><a href="${pageMaker.startPage-1}">Previous</a>
+									</li>
+								</c:if>
+								
+								<c:forEach var="num" begin="${pageMaker.startPage }" end="${pageMaker.endPage }">
+								<li class="paginate_button ${pageMaker.cri.pageNum == num ? "active":""} "> <a href="${num}">${num}</a></li>
+								</c:forEach>
+								
+								
+								<c:if test="${pageMaker.next}">
+									<li class="paginate_button next"><a href="${pageMaker.endPage +1 }">Next</a>
+									</li>
+								</c:if>
+								</ul>
+								
+							</div>
+							<!-- paging -->
+
 	                       <!-- 모달창 ---------------------------------------------->
 							<div id="myModal" class="modal fade" role="dialog">
 							  <div class="modal-dialog">

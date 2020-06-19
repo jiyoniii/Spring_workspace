@@ -11,4 +11,7 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.zerock.mapper.BoardMapper"/>
+<fullyQualifiedTypeName name="lombok.Setter"/>
+<fullyQualifiedTypeName name="lombok.Getter"/>
+<fullyQualifiedTypeName name="org.zerock.domain.PageDTO"/>
 </qualifiedTypeNameHistroy>

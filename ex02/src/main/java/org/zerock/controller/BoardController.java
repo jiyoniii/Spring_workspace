@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.Criteria;
+import org.zerock.domain.PageDTO;
 import org.zerock.service.BoardService;
 
 import lombok.AllArgsConstructor;
@@ -24,14 +26,21 @@ public class BoardController {
 	//컨트롤러는 모든 게시판들 이동을 말그대로 '컨트롤'해주는 곳이기 때문에 여기서 모든 jsp파일로 이동할 수 있도록 컨트롤하는 공간임.
 	
 	//목록화면
+//	@GetMapping("/list")
+//	public void list (Model model) {
+//		log.info("list");
+//		//model을 사용해서 list라는 이름으로 jsp에 목록을 표시하게됨. jsp에서는 list로 모든 attribute전달받게되어, 리스트로 쭉- 나오게 됨.
+//		model.addAttribute("list",service.getList());
+//	}
+	
 	@GetMapping("/list")
-	public void list (Model model) {
+	public void list (Criteria cri,Model model) {
 		
 		log.info("list");
-		
 		//model을 사용해서 list라는 이름으로 jsp에 목록을 표시하게됨. jsp에서는 list로 모든 attribute전달받게되어, 리스트로 쭉- 나오게 됨.
-		
-		model.addAttribute("list",service.getList());
+		model.addAttribute("list",service.getList(cri));
+		//cri다음에 나온 123은 페이지 값을 임의로 지정하여 작성하였음.
+		model.addAttribute("pageMaker", new PageDTO(cri,123));
 	}
 
 	//등록화면. 
@@ -49,12 +58,42 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
-	//상세보기
-	@GetMapping("/get")
+	//상세보기 & 수정화면.
+	@GetMapping({"/get", "/modify"})
 	public void get(@RequestParam("bno")Long bno, Model model) {
 		
-		log.info("/get");
+		log.info("/get or /modify");
 		model.addAttribute("board",service.get(bno));
+	}
+	
+	/*
+	 * //상세보기 & 수정화면. 위의 내용을 get과 modify를 분리하면 이렇게 코딩할 수도 있음.
+	 * 
+	 * @GetMapping("/modify") public void get(@RequestParam("bno")Long bno, Model
+	 * model) {
+	 * 
+	 * log.info("/modify"); model.addAttribute("board",service.get(bno)); }
+	 */
+	
+	//수정처리
+	@PostMapping("/modify")
+	public String modify(BoardVO board, RedirectAttributes rttr) {
+		log.info("modify: " + board);
+		
+		if(service.modify(board)) {
+			rttr.addFlashAttribute("result", "success");
+		}
+		return "redirect:/board/list";
+	}
+	
+	//삭제처리
+	@PostMapping("/remove")
+	public String remove (@RequestParam("bno") Long bno, RedirectAttributes rttr) {
+		log.info("remove......."+bno);
+		if(service.remove(bno)) {
+			rttr.addFlashAttribute("result","success");
+		}
+		return "redirect:/board/list";
 	}
 	
 	
