@@ -1,9 +1,0 @@
-package org.zerock.persistance;
-
-import org.junit.runner.RunWith;
-
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
-public class DataSourceTests {
-
-}

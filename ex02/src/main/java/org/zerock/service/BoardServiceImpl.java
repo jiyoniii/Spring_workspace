@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Log4j //롬복과 관련된 어노테이션
-@Service
+@Service  //Inpl.java에서 이 어노테이션 걸지 않으면, 500번 에러 걸림.
 @AllArgsConstructor //이걸 넣어야 아래코드에 자동주입이 됨. 롬복과 관련
 public class BoardServiceImpl implements BoardService{
 
@@ -61,6 +61,13 @@ public class BoardServiceImpl implements BoardService{
 		
 		
 		return mapper.getListWithPaging(cri);
+	}
+
+	@Override
+	public int getTotal(Criteria cri) {
+		log.info("get total count");
+		
+		return mapper.getTotalCount(cri);
 	}
 	
 }

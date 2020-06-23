@@ -22,4 +22,9 @@ public interface BoardService {
 	 
 	 //삭제
 	 public boolean remove(Long bno);
+	 
+	 //데이터 개수 처리
+	 public int getTotal(Criteria cri);
+	 
+	 
 }

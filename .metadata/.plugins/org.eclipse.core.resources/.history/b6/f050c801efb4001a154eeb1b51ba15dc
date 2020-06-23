@@ -1,0 +1,10 @@
+console.log("Reply Module........");
+
+//자동호출 함수
+var replyService = (function(){
+	
+	
+	
+}
+
+)();

@@ -9,6 +9,7 @@
 	<!-- 수정,삭제,목록 버틑에 따라 다르게 이동할 수 있도록 js를 작성 -->
 	<script>
 		$(document).ready(function(){
+			
 			var formObj = $("form");
 			$('button').on("click", function(e){
 				e.preventDefault();
@@ -18,18 +19,44 @@
 				console.log(operation);
 				
 				if(operation === 'remove'){
-					formObj.attr("acrion", "/board/remove");
+					formObj.attr("action", "/board/remove");
+					
 				}else if (operation === 'list'){
 					//move to list
 					/* 메소드가 post인것을 get으로 바꾸겠단 소리! */
 					formObj.attr("action","/board/list").attr("method","get");
-					formObj.empty();
 					
-					return;
+					//clone부터 append 까지 코드 설명..백업을 만들어놓고 지운다음에 다시  4개만 추가해서 전송하겠다! 라는 뜻.
+					
+					//필요한 것 먼저 백업.(clone())
+					var pageNumTag= $("input[name='pageNum']").clone();
+					var amountTag= $("input[name='amount']").clone();
+					var keywordTag= $("input[name='keyword']").clone();
+					var typeTag= $("input[name='type']").clone();
+					//입력항목 전부 삭제
+					formObj.empty();
+					//필요한 네가지 다시 추가.
+					formObj.append(pageNumTag);
+					formObj.append(amountTag);
+					formObj.append(keywordTag);
+					formObj.append(typeTag);
 				}
 				formObj.submit();
-			});
+			});			
 		});
+		
+	 	function deleteCheck(){
+		delConfirm = confirm("삭제하시겠습니까?");
+		
+		if(delConfirm){
+			alert("삭제되었습니다.");
+			document.form.submit();
+		}else{
+			alert("삭제가 취소되었습니다.");
+			return false;
+		} 	
+		
+		}
 	</script>
 
 
@@ -50,7 +77,12 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                        <form action="/board/modify" role="form" method="post">
+                        <form name="form" action="/board/modify" role="form" method="post">
+                        
+                        	<input  type = 'hidden' name='pageNum' value='<c:out value="${cri.pageNum }"/>'>
+                        	<input  type = 'hidden' name='amount' value='<c:out value="${cri.amount }"/>'>
+                        	<input  type = 'hidden' name='type' value='<c:out value="${cri.type }"/>'>
+                        	<input  type = 'hidden' name='keyword' value='<c:out value="${cri.keyword }"/>'>
                         
                         	<div class="form-group">
                            		<label>Bno</label><input class="form-control" name='bno' value='<c:out value="${board.bno}"/>' readonly="readonly"> 
@@ -71,21 +103,11 @@
                            		
                            	</div>
                            	
-                           	<div class="form-group">
-                           		<label>RegDate</label>
-                           		<input class="form-control" name='regDate' value='<fmt:formatDate pattern ="yyyy/MM/dd" value="${board.regdate}"/>' readonly="readonly">
-                           	</div>
-                           	
-                           	<div class="form-group">
-                           		<label>Update Date</label>
-                           		<input class="form-control" name='updateDate' value='<fmt:formatDate pattern ="yyyy/MM/dd" value="${board.updateDate}"/>' readonly="readonly">
-                           	</div>
-                           	
-                           	
+                     
                            	<!-- data-oper는 사용자정의 속성 -->
                            	<!-- data-oper는 사용자 정의로 내가 알아서 만들 수 있음. -->
                            	<button type="submit" data-oper='modify' class="btn btn-default">수정</button>
-                           	<button type="submit" data-oper='remove' class="btn btn-daner">삭제</button>
+                           	<input type="button" value ="삭제" data-oper='remove' class="btn btn-danger" onclick="deleteCheck()">
                            	<button type="submit" data-oper='list' class="btn btn-info">목록</button>
                            	
                            </form>

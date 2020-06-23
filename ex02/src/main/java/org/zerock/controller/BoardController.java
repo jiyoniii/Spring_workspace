@@ -3,6 +3,7 @@ package org.zerock.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,11 +37,20 @@ public class BoardController {
 	@GetMapping("/list")
 	public void list (Criteria cri,Model model) {
 		
-		log.info("list");
+		log.info("list: "+cri);
 		//model을 사용해서 list라는 이름으로 jsp에 목록을 표시하게됨. jsp에서는 list로 모든 attribute전달받게되어, 리스트로 쭉- 나오게 됨.
 		model.addAttribute("list",service.getList(cri));
-		//cri다음에 나온 123은 페이지 값을 임의로 지정하여 작성하였음.
-		model.addAttribute("pageMaker", new PageDTO(cri,123));
+		
+		//cri다음에 나온 123은 글의 갯수를 123개로 임의로 지정하여 작성하였음.
+		//model.addAttribute("pageMaker", new PageDTO(cri,123));
+		
+		int total = service.getTotal(cri);
+		
+		log.info("total: " + total);
+		
+		model.addAttribute("pageMaker",new PageDTO(cri,total));
+		
+		
 	}
 
 	//등록화면. 
@@ -60,7 +70,7 @@ public class BoardController {
 	
 	//상세보기 & 수정화면.
 	@GetMapping({"/get", "/modify"})
-	public void get(@RequestParam("bno")Long bno, Model model) {
+	public void get(@RequestParam("bno")Long bno, @ModelAttribute("cri") Criteria cri, Model model) {
 		
 		log.info("/get or /modify");
 		model.addAttribute("board",service.get(bno));
@@ -77,23 +87,37 @@ public class BoardController {
 	
 	//수정처리
 	@PostMapping("/modify")
-	public String modify(BoardVO board, RedirectAttributes rttr) {
+	public String modify(BoardVO board, @ModelAttribute("cri") Criteria cri ,RedirectAttributes rttr) {
 		log.info("modify: " + board);
 		
 		if(service.modify(board)) {
 			rttr.addFlashAttribute("result", "success");
 		}
-		return "redirect:/board/list";
+		
+//		rttr.addAttribute("pageNum", cri.getPageNum());
+//		rttr.addAttribute("amount", cri.getAmount());
+//		rttr.addAttribute("type", cri.getType());
+//		rttr.addAttribute("keyword", cri.getKeyword());
+		
+		//바로위에 코드 대신에 +cri.getListLink()를 붙여 사용하는것도 가능함.
+		return "redirect:/board/list"+cri.getListLink();
 	}
 	
 	//삭제처리
 	@PostMapping("/remove")
-	public String remove (@RequestParam("bno") Long bno, RedirectAttributes rttr) {
+	public String remove (@RequestParam("bno") Long bno,@ModelAttribute("cri") Criteria cri, RedirectAttributes rttr) {
 		log.info("remove......."+bno);
+		
 		if(service.remove(bno)) {
 			rttr.addFlashAttribute("result","success");
 		}
-		return "redirect:/board/list";
+//		rttr.addAttribute("pageNum", cri.getPageNum());
+//		rttr.addAttribute("amount", cri.getAmount());
+//		rttr.addAttribute("type", cri.getType());
+//		rttr.addAttribute("keyword", cri.getKeyword());
+		
+//		//바로위에 코드 대신에 +cri.getListLink()를 붙여 사용하는것도 가능함.
+		return "redirect:/board/list"+cri.getListLink();
 	}
 	
 	

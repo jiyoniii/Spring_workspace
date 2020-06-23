@@ -14,6 +14,9 @@ public interface BoardMapper {
 	//목록 with paging
 	public List<BoardVO> getListWithPaging(Criteria cri);
 	
+	//전체글 수
+	public int getTotalCount(Criteria cri);
+	
 	//등록
 //	boardMapper.xml에서의 id가 아래와 동일한 insert였음.
 	public void insert (BoardVO board);

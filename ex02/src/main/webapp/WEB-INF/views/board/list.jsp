@@ -46,7 +46,41 @@
 		      });
 		      
 		      
+		      $(".move").on("click",function(e){
+		    	  e.preventDefault();
+		    	  actionForm.append("<input type='hidden' name='bno' value='"+$(this).attr("href")+"'>");
+		    	  actionForm.attr("action","/board/get");
+		    	  actionForm.submit();
+		      })
 		      
+		      var searchForm = $("#searchForm");
+		      $("#searchForm button").on("click",function(e){
+		    	  if(!searchForm.find("option:selected").val()){
+		    		  alert("검색종류를 선택하세요");
+		    		  return false;
+		    	  }
+		    	  
+		    	  if(!searchForm.find("input[name='keyword']").val()){
+		    		  alert("키워드를 입력하세요");
+		    		  return false;
+		    	  }
+		    	  
+		    	  searchForm.find("input[name='pageNum']").val("1");
+		    	  e.preventDefault();
+		    	  
+		    	  searchForm.submit();
+		    	  
+		      });
+		      
+	 	      var amountForm =$("#amountForm");
+		      $("#amountForm").on("change",function(e){
+		    	  
+		    	  amountForm.submit();
+		      });
+		    
+		      
+		      
+
 		   });
 	</script>
 
@@ -65,8 +99,22 @@
                         <div class="panel-heading">
                             	글목록
                             <button id='regBtn' type="button" class="btn btn-primary btn-xs pull-right">글쓰기</button>
+                            
+                            <!-- amount로 콤보박스 만들기 ----------------------------------------------------->
                             	
+                            <form id="amountForm" action="/board/list" method="get" class="pull-right">
+                            	게시글 수
+                            	<select name="amount">                       	
                             	
+                            	<option value="10"<c:out value="${pageMaker.cri.amount eq '10'?'selected':''}"/>>10</option>
+                            	<option value="20"<c:out value="${pageMaker.cri.amount eq '20'?'selected':''}"/>>20</option>
+                            	<option value="30"<c:out value="${pageMaker.cri.amount eq '30'?'selected':''}"/>>30</option>
+                            	<option value="40"<c:out value="${pageMaker.cri.amount eq '40'?'selected':''}"/>>40</option>
+                            	<option value="50"<c:out value="${pageMaker.cri.amount eq '50'?'selected':''}"/>>50</option> 
+                            	
+                            	</select>
+                            </form>                            
+                            <!-- amount로 콤보박스 만들기 -->
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -84,7 +132,12 @@
                             	<tr>
                             	<!-- 38번 라인의 작성법이나, c:out으로 작성하는 것이나 출력되는 결과값은 동일하다. -->
                             		<td>${board.bno}</td>
-                            		<td width="330"><a href='/board/get?bno=<c:out value ="${board.bno}" />'><c:out value="${board.title}"/></a></td>
+                            		<td width="330">
+                            		<%-- <a href='/board/get?bno=<c:out value ="${board.bno}" />'>
+                            		<c:out value="${board.title}"/></a> --%>
+                            		<a class='move' href="<c:out value='${board.bno}'/>">
+                            		<c:out value="${board.title }"/></a>                            		
+                            		</td>
                             		<td><c:out value ="${board.writer}" /></td>
                             		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.regdate}" /></td>
                             		<td><fmt:formatDate pattern="yyyy-MM-dd" value="${board.updateDate}" /></td>
@@ -94,13 +147,56 @@
                             </table>
                             <!-- /.table-responsive -->
 							
-							
-							
+							<!-- 검색조건 처리  ----------------------------------->
+							<div class='row'>
+								<div class="col-lg-12">
+								
+									<form id='searchForm' action="/board/list" method='get'>
+										<select name='type'>
+										<option value="" <c:out value="${pageMaker.cri.type==null?'selected':''}"/>>--</option>
+											<option value="T"
+											<c:out value="${pageMaker.cri.type eq 'T'?'selected':''}"/> 
+											>제목</option>
+											<option value="C"
+											<c:out value="${pageMaker.cri.type eq 'C'?'selected':''}"/> 
+											>내용</option>
+											<option value="W"
+											<c:out value="${pageMaker.cri.type eq 'W'?'selected':''}"/> 
+											>작성자</option>
+											<option value="TC"
+											<c:out value="${pageMaker.cri.type eq 'TC'?'selected':''}"/> 
+											>제목 or 내용</option>
+											<option value="TW"
+											<c:out value="${pageMaker.cri.type eq 'TW'?'selected':''}"/> 
+											>제목 or 작성자</option>
+											<option value="TWC"
+											<c:out value="${pageMaker.cri.type eq 'TWC'?'selected':''}"/> 
+											>제목 or 내용 or 작성자</option>
+										</select>
+										<input type='text' name='keyword'
+										value='<c:out value="${pageMaker.cri.keyword }"/>'/>
+										<input type='hidden' name='pageNum' 
+										value='<c:out value="${pageMaker.cri.pageNum }"/>'/>
+										<input type='hidden' name='amount'	
+										value='<c:out value="${pageMaker.cri.amount }"/>'/>
+										
+										
+										
+										<button class='btn btn-default'>Search</button>
+									
+										
+									</form>
+								</div>
+							</div>
+							<!-- 검색조건 처리 -->
+		
 							<!-- paging ------------------------------------------------>
 							
 							<form id='actionForm' action ="/board/list" method='get'>
 								<input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum}'>
 								<input type='hidden' name='amount' value='${pageMaker.cri.amount }'>
+								<input type='hidden' name='type' value='<c:out value="${pageMaker.cri.type }"/>'>
+								<input type='hidden' name='keyword' value='<c:out value="${pageMaker.cri.keyword }"/>'>
 							</form>
 							
 							
