@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="customAccessDenied" class="org.zerock.security.CustomAccessDeniedHandler"></bean>
+	
+	<security:http>
+		<security:intercept-url pattern="/sample/all" access="permitAll"/>
+		
+		<security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')"/>
+		
+		<security:intercept-url pattern="/sample/admin" access="hasRole('ROLE_ADMIN')"/>
+	
+
+		
+		<!-- <security:form-login /> -->
+		<!-- 로그인이 거부되면 에러페이지 연결되게 표시함. -->
+		<!-- <security:access-denied-handler error-page="/accessError"/> -->
+
+		<security:access-denied-handler ref="customAccessDenied"/>
+		
+		<security:form-login/>
+		
+	</security:http>
+	
+	<!-- ID/PW 일치하는지를 검증 -->
+	<security:authentication-manager>
+	
+		<security:authentication-provider>
+			<security:user-service>
+				<!-- name은 id를 뜻함. {noop}을 붙이면 암호화처리가 됨. authorities는 권한을 확인 -->
+				<security:user name="member" password="{noop}member" authorities="ROLE_MEMBER" />
+				
+				<!-- ROLE 두가지 작성해뒀으니 admin, member 둘다 진입 가능함. -->
+				<security:user name="admin" password="{noop}admin" authorities="ROLE_MEMBER, ROLE_ADMIN" />
+			
+			</security:user-service>
+		
+		
+		</security:authentication-provider>
+	
+	
+	</security:authentication-manager>
+
+
+</beans>

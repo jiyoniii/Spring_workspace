@@ -1,7 +1,0 @@
-package org.zerock.domain;
-
-
-@Data
-public class TodoDTO {
-
-}

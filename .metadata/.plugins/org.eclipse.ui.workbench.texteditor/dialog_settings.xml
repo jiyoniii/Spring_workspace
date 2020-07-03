@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="vno"/>
+		<item key="selection" value="SB Admin"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="vno"/>
-			<item value="cri"/>
-			<item value="pageMaker"/>
-			<item value="pagemaker"/>
-			<item value="글쓰기"/>
-			<item value="post"/>
-			<item value="operForm"/>
-			<item value="actionForm"/>
-			<item value="keyword"/>
-			<item value="searchForm"/>
-			<item value="&lt;/c:forEach&gt;"/>
-			<item value="panel-heading"/>
-			<item value="list"/>
-			<item value="목록"/>
-			<item value="{list}"/>
+			<item value="SB admin"/>
+			<item value="dash"/>
+			<item value="dashboard"/>
+			<item value="pre"/>
+			<item value="formobj"/>
+			<item value="regex"/>
+			<item value="before"/>
+			<item value="fa"/>
+			<item value="regExp"/>
+			<item value="showupload"/>
+			<item value="delete"/>
+			<item value="remove"/>
+			<item value="jquery"/>
+			<item value="../"/>
+			<item value="/resources"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="12"/>
-		<item key="DIALOG_Y_ORIGIN" value="385"/>
+		<item key="DIALOG_X_ORIGIN" value="8"/>
+		<item key="DIALOG_Y_ORIGIN" value="257"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

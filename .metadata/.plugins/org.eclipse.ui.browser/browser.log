@@ -4,3 +4,55 @@
 
 6월 23, 2020 10:57:42.18 NEW SESSION
 6월 23, 2020 10:57:42.18 [10568:12992:0623/105742.187:ERROR:device_event_log_impl.cc(208)] [10:57:42.187] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+
+6월 24, 2020 09:44:52.29 NEW SESSION
+6월 24, 2020 09:44:52.29 [1196:15792:0624/094452.293:ERROR:device_event_log_impl.cc(208)] [09:44:52.293] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 24, 2020 09:48:56.67 [1264:12600:0624/094856.678:ERROR:device_event_log_impl.cc(208)] [09:48:56.678] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 24, 2020 12:02:52.23 [1264:12600:0624/120252.238:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+6월 24, 2020 12:02:52.23 [1264:12600:0624/120252.238:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+
+6월 25, 2020 09:36:34.44 NEW SESSION
+6월 25, 2020 09:36:34.44 [14964:14612:0625/093634.439:ERROR:device_event_log_impl.cc(208)] [09:36:34.439] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+6월 25, 2020 10:35:00.61 [14964:14612:0625/103500.613:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+6월 25, 2020 10:35:00.61 [14964:14612:0625/103500.613:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+6월 25, 2020 10:36:03.19 [14964:14612:0625/103603.195:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+6월 25, 2020 10:36:03.19 [14964:14612:0625/103603.195:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+
+7월 01, 2020 09:52:19.33 NEW SESSION
+7월 01, 2020 09:52:19.33 [9796:16252:0701/095219.332:ERROR:device_event_log_impl.cc(208)] [09:52:19.332] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 01, 2020 11:18:03.40 [9796:16252:0701/111803.400:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+7월 01, 2020 11:18:03.40 [9796:16252:0701/111803.400:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+7월 01, 2020 12:03:21.90 [3032:7948:0701/120321.905:ERROR:device_event_log_impl.cc(208)] [12:03:21.898] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 01, 2020 12:07:58.14 [3032:7948:0701/120758.143:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+7월 01, 2020 12:07:58.14 [3032:7948:0701/120758.143:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+
+7월 01, 2020 17:22:54.89 NEW SESSION
+7월 01, 2020 17:22:54.89 [2328:3016:0701/172254.890:ERROR:device_event_log_impl.cc(208)] [17:22:54.890] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+
+7월 02, 2020 09:36:34.96 NEW SESSION
+7월 02, 2020 09:36:34.97 [8332:2424:0702/093634.968:ERROR:device_event_log_impl.cc(208)] [09:36:34.967] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 02, 2020 09:39:24.31 [5860:6976:0702/093924.312:ERROR:device_event_log_impl.cc(208)] [09:39:24.313] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 02, 2020 10:45:31.66 [5860:6976:0702/104531.659:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+7월 02, 2020 10:45:31.66 [5860:6976:0702/104531.659:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+7월 02, 2020 11:46:06.91 [6168:1084:0702/114606.917:ERROR:device_event_log_impl.cc(208)] [11:46:06.917] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 02, 2020 11:49:52.96 [6168:1084:0702/114952.967:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+7월 02, 2020 11:49:52.96 [6168:1084:0702/114952.967:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+7월 02, 2020 17:32:44.81 [11292:5864:0702/173244.815:ERROR:device_event_log_impl.cc(208)] [17:32:44.815] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+
+7월 03, 2020 09:33:23.01 NEW SESSION
+7월 03, 2020 09:33:23.01 [1180:2408:0703/093323.017:ERROR:device_event_log_impl.cc(208)] [09:33:23.017] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 03, 2020 09:50:24.51 [1180:2408:0703/095024.516:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+7월 03, 2020 09:50:24.51 [1180:2408:0703/095024.516:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+7월 03, 2020 10:15:57.15 [1180:2408:0703/101557.156:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+7월 03, 2020 10:15:57.15 [1180:2408:0703/101557.156:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+7월 03, 2020 10:17:00.16 [1180:2408:0703/101700.162:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+7월 03, 2020 10:17:00.16 [1180:2408:0703/101700.162:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+7월 03, 2020 10:17:01.25 [1180:2408:0703/101701.249:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+7월 03, 2020 10:17:01.25 [1180:2408:0703/101701.249:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+7월 03, 2020 10:26:39.19 [1180:2408:0703/102639.193:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+7월 03, 2020 10:26:39.19 [1180:2408:0703/102639.193:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+7월 03, 2020 12:07:51.87 [1180:2408:0703/120751.873:ERROR:CONSOLE(2117)] "Cannot find context with specified id", source: devtools://devtools/bundled/sdk/sdk.js (2117)
+7월 03, 2020 12:07:51.87 [1180:2408:0703/120751.873:ERROR:CONSOLE(216)] "Extension server error: Inspector protocol error: Cannot find context with specified id", source: devtools://devtools/bundled/extensions/extensions.js (216)
+7월 03, 2020 14:28:06.66 [11548:2468:0703/142806.660:ERROR:device_event_log_impl.cc(208)] [14:28:06.661] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 03, 2020 16:42:13.92 [11792:6952:0703/164213.920:ERROR:device_event_log_impl.cc(208)] [16:42:13.920] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
+7월 03, 2020 17:09:08.72 [13160:8824:0703/170908.728:ERROR:device_event_log_impl.cc(208)] [17:09:08.728] Bluetooth: bluetooth_adapter_winrt.cc:1060 Getting Default Adapter failed.
